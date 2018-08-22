@@ -1,0 +1,32 @@
+body {
+  padding-top: 100px;
+}
+
+main {
+  background-color: #E2DED3;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+img {
+  max-width: 100%;
+}
+
+ul.menu {
+  padding: 0;
+  margin: 0;
+
+  > li {
+    display: block;
+  }
+}
+
+a {
+  transition: all .5s;
+  display: inline-block;
+
+  &:hover {
+    text-decoration: none;
+  }
+}

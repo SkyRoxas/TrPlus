@@ -1,0 +1,30 @@
+.slogan_block_wrapper {
+  background-color: #EA5A1B;
+
+  .row {
+    margin: 0;
+
+    > * {
+      padding: 0;
+
+      &:first-child {
+        padding: 40px 20px;
+
+        .slogan_wrapper {
+          color: white;
+
+          .slogan {
+            margin-bottom: 20px;
+            @include media-breakpoint-up(md) {
+            }
+          }
+
+          .description {
+            @include media-breakpoint-up(md) {
+            }
+          }
+        }
+      }
+    }
+  }
+}

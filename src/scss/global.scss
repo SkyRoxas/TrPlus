@@ -1,0 +1,67 @@
+//
+// Background
+//
+.bg01{
+  background-image: url("./../images/bg01.png");
+  background-color: #4E413B;
+}
+
+//
+// Icon
+//
+
+.icon {
+  display: flex;
+  align-items: center;
+  &:before{
+    content: '';
+    display: block;
+  }
+}
+
+.arrow-left-white {
+  &:before{
+    background: url("./../images/icons/arrowLeft-white.png") no-repeat;
+    background-size: 100%;
+    width: 63px * 0.3;
+    height: 97px * 0.3;
+  }
+}
+
+.arrow-right-white {
+  &:before{
+    background: url("./../images/icons/arrowRight-white.png") no-repeat;
+    background-size: 100%;
+    width: 63px * 0.3;
+    height: 97px * 0.3;
+  }
+}
+
+.arrow-left-primary {
+  &:before{
+    background: url("./../images/icons/arrowLeft-primary.png") no-repeat;
+    background-size: 100%;
+    width: 63px * 0.3;
+    height: 97px * 0.3;
+  }
+}
+
+.arrow-right-primary {
+  &:before{
+    background: url("./../images/icons/arrowRight-primary.png") no-repeat;
+    background-size: 100%;
+    width: 63px * 0.3;
+    height: 97px * 0.3;
+  }
+}
+
+//
+// Button
+//
+
+a.btn-radius, .btn-radius {
+  color: #EA5717;
+  border-radius: 25px;
+  border:2px solid #EA5717;
+  padding:10px 30px;
+}

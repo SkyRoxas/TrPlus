@@ -1,0 +1,75 @@
+.origination-block {
+  margin: 115px auto;
+  .bg-wrap {
+    padding: 78px 54px;
+    .text {
+      @include media-breakpoint-up(xl) {
+      }
+    }
+  }
+  .origination-wrap {
+    margin-bottom: 30px;
+    @include media-breakpoint-up(xl) {
+      margin-bottom: 80px;
+    }
+    .origination {
+      margin-top: 27px;
+      .title {
+        @include media-breakpoint-up(xl) {
+        }
+      }
+      .text {
+        @include media-breakpoint-up(xl) {
+          line-height: 3rem;
+        }
+        color: $brown-1;
+      }
+    }
+  }
+  .values,
+  .goals,
+  .strategy {
+    .title {
+    }
+    .text {
+      color: $brown-1;
+    }
+    .items-wrap {
+      @include media-breakpoint-up(xl) {
+        column-rule: 1px solid $orange;
+        column-gap: 100px;
+        column-count: 2;
+      }
+      .items {
+        padding: 0;
+        .item {
+          color: $brown-1;
+        }
+      }
+    }
+    &:after {
+      content: "";
+      background-color: $orange;
+      width: 100%;
+      display: block;
+      height: 43px;
+    }
+  } // 同高 
+  .values,
+  .goals {
+    .box {
+      @include media-breakpoint-up(xl) {
+        min-height: 400px;
+      }
+    }
+  }
+  .goals {
+    .text {
+      @include media-breakpoint-up(xl) {
+        column-rule: 1px solid $orange;
+        column-gap: 100px;
+        column-count: 2;
+      }
+    }
+  }
+}
