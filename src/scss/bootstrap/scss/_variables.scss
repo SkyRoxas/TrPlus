@@ -25,17 +25,17 @@ $grays: map-merge( ( "100": $gray-100, "200": $gray-200, "300": $gray-300, "400"
 $blue : #007bff;
 $indigo : #6610f2;
 $purple : #6f42c1;
-$pink : #e83e8c;
+$pink : #EA595E;
 $red : #dc3545;
 $orange : #EA5717;
 $yellow : #ffc107;
 $green : #28a745;
 $teal : #20c997;
-$cyan : #17a2b8;
+$cyan : #007481;
 $colors: ();
 // stylelint-disable-next-line scss/dollar-variable-default
 $colors: map-merge( ( "blue" : $blue, "indigo" : $indigo, "purple" : $purple, "pink" : $pink, "red" : $red, "orange" : $orange, "yellow" : $yellow, "green" : $green, "teal" : $teal, "cyan" : $cyan, "white" : $white, "gray" : $gray-600, "gray-dark" : $gray-800), $colors);
-$primary : $orange;
+$primary : $cyan;
 $secondary : $gray-600;
 $success : $green;
 $info : $cyan;
@@ -80,7 +80,7 @@ $sizes: map-merge( ( 25: 25%, 50: 50%, 75: 75%, 100: 100%, auto: auto), $sizes);
 // Body
 //
 // Settings for the `<body>` element.
-$body-bg : $brown-2;
+$body-bg : $white;
 $body-color : $gray-900;
 // Links
 //
