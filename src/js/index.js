@@ -1,5 +1,7 @@
 import './import-jquery'
 import 'bootstrap'
+import 'slick-carousel/slick/slick.css'
+import 'slick-carousel/slick/slick-theme.css'
 import './slideshow'
 
 import AOS from 'aos'

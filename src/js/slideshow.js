@@ -1,15 +1,8 @@
-// import 'bxslider';
+import 'slick-carousel';
 
-// $(function() {
-//     $('.bxslider').bxSlider({
-//         mode: 'horizontal',
-//         captions: true,
-//         adaptiveHeight: true,
-//         pager: false,
-//     });
-//     $(window).resize(() => {
-//         $('.bxslider').bxSlider('reloadSlider');
-//     });
-// });
+$(function() {
+  $('#slideshow').slick({
+    dots: true,
+  })
+})
 
-// export default test();

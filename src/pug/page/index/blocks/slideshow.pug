@@ -1,0 +1,34 @@
+-
+  var slideData = {
+    1:{
+        title: '綠美圖將成台中新地標', 
+        image: '../../../images/slide.jpg',
+        link_text: 'SHOP NOW',
+        link: './newsNode.html'
+      },
+    2:{
+        title: '台中綠美圖讓人不自覺想進來', 
+        image: '../../../images/slide.jpg',
+        link_text: 'SHOP NOW',
+        link: './newsNode.html'
+      },
+    3:{
+        title: '西苑高中圖書館美化牆', 
+        image: '../../../images/slide.jpg',
+        link_text: 'SHOP NOW',
+        link: './newsNode.html'
+      },
+   }
+
+.slideshow_block
+    #slideshow.mb-0
+        each slide,index in slideData
+          .item
+            .wrap
+              img(src=slide.image)
+              .text-wrap
+                .text.text-white.text-center.font-weight-bold= slide.title
+                a.btn.btn-outline-light.py-3(href=slide.link)= slide.link_text
+            
+               
+                
