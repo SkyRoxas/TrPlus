@@ -1,0 +1,57 @@
+include ../../../mixin/card03
+
+-
+  var lifeFirst = {
+    image: './images/card03.jpg',
+    title: '<div>「世界最佳的餐廳」 捲土重來！</div><div>體驗食在丹麥的實驗餐桌，NOMA2.0</div>', 
+    content: '#丹麥,#哥本哈根,#生活美學,#空間設計,#設計靈蓋,#餐廳',
+    link: 'http://google.tw'
+  }
+  
+  var lifeData = {
+    1:{ 
+        image: './images/card03.jpg',
+        title: '<div>「世界最佳的餐廳」 捲土重來！</div><div>體驗食在丹麥的實驗餐桌，NOMA2.0</div>', 
+        content: '#丹麥,#哥本哈根,#生活美學,#空間設計,#設計靈蓋,#餐廳',
+        link: 'http://google.tw'      },
+    2:{ 
+        image: './images/card03.jpg',
+        title: '<div>「世界最佳的餐廳」 捲土重來！</div><div>體驗食在丹麥的實驗餐桌，NOMA2.0</div>', 
+        content: '#丹麥,#哥本哈根,#生活美學,#空間設計,#設計靈蓋,#餐廳',
+        link: 'http://google.tw'      },
+    3:{ 
+        image: './images/card03.jpg',
+        title: '<div>「世界最佳的餐廳」 捲土重來！</div><div>體驗食在丹麥的實驗餐桌，NOMA2.0</div>', 
+        content: '#丹麥,#哥本哈根,#生活美學,#空間設計,#設計靈蓋,#餐廳',
+        link: 'http://google.tw'      },
+    4:{ 
+        image: './images/card03.jpg',
+        title: '<div>「世界最佳的餐廳」 捲土重來！</div><div>體驗食在丹麥的實驗餐桌，NOMA2.0</div>', 
+        content: '#丹麥,#哥本哈根,#生活美學,#空間設計,#設計靈蓋,#餐廳',
+        link: 'http://google.tw'      },
+    5:{ 
+        image: './images/card03.jpg',
+        title: '<div>「世界最佳的餐廳」 捲土重來！</div><div>體驗食在丹麥的實驗餐桌，NOMA2.0</div>', 
+        content: '#丹麥,#哥本哈根,#生活美學,#空間設計,#設計靈蓋,#餐廳',
+        link: 'http://google.tw'      },
+    6:{ 
+        image: './images/card03.jpg',
+        title: '<div>「世界最佳的餐廳」 捲土重來！</div><div>體驗食在丹麥的實驗餐桌，NOMA2.0</div>', 
+        content: '#丹麥,#哥本哈根,#生活美學,#空間設計,#設計靈蓋,#餐廳',
+        link: 'http://google.tw'      },
+  
+   }
+
+#filter-block
+  .container 
+    div(class="mb-5 border-secondary" style="border-bottom: 3px solid;")
+      h2.block-title(class="h3 text-secondary") hoi! 好好生活
+    +card03(lifeFirst,'col-6', 'col-6')
+    ul.row.p-0.mt-5
+      each item, index in lifeData
+        li.d-flex.col-md-4.mb-5
+          +card03(item)
+    .more_btn.text-center
+      a(href="./index.html#contact") 預約賞屋
+          
+            

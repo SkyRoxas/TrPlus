@@ -16,12 +16,12 @@ mixin card02(obj)
     .wrap(class="p-3")
       .title.mb-3
         h3(class="h4") 
-          a(class="text-primary" href=obj.link) !{obj.title}
+          a(class="text-secondary" href=obj.link) !{obj.title}
       .d-flex.justify-content-between.align-items-center
         .price
-          span(class="text-primary mr-4")=obj.sale
-          del=obj.price
-        .cart.text-primary.h3
+          span(class="text-secondary mr-4")=obj.sale
+          del(class="text-light")=obj.price
+        .cart.text-secondary.h3
           a(href="./cart.html")
             i.fas.fa-shopping-cart
           
