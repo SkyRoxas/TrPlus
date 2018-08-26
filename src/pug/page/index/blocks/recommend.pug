@@ -1,0 +1,48 @@
+
+include ../../../mixin/card02.pug
+
+-
+  var idealDatas = {
+  1:{ 
+      title: '床組【UHO】秋原超省空間 3.5 尺床組二件組 (床頭是衣櫃+一抽床底)', 
+      image: './images/card01.png',
+      sale: '$ 99,999',
+      price: '$ 99.999',
+      link: './newsNode.html'
+    },
+  2:{ 
+      title: '床組【UHO】秋原超省空間 3.5 尺床組二件組 (床頭是衣櫃+一抽床底)', 
+      image: './images/card01.png',
+      sale: '$ 99,999',
+      price: '$ 99.999',
+      link: './newsNode.html'
+    },
+  3:{ 
+      title: '床組【UHO】秋原超省空間 3.5 尺床組二件組 (床頭是衣櫃+一抽床底)', 
+      image: './images/card01.png',
+      sale: '$ 99,999',
+      price: '$ 99.999',
+      link: './newsNode.html'
+    },
+  4:{ 
+      title: '床組【UHO】秋原超省空間 3.5 尺床組二件組 (床頭是衣櫃+一抽床底)', 
+      image: './images/card01.png',
+      sale: '$ 99,999',
+      price: '$ 99.999',
+      link: './newsNode.html'
+    },
+  }
+
+
+#recommend-block.py-5
+  .container
+    .d-flex.justify-content-between.align-items-center(class="mb-5 border-primary" style="border-bottom: 3px solid;")
+      h2.block-title(class="h3 text-primary") 新品推薦
+      .d-flex.justify-content-between(class="text-primary h3" style="width:80px")
+        i.fas.fa-arrow-left
+        i.fas.fa-arrow-right
+        
+    ul.row.m-0.p-0
+      each item, index in idealDatas
+        li.d-flex.col-lg-3.col-md-6.mb-5(class=(index == 3 ? 'd-md-none d-lg-flex': '') data-aos="fade-left" data-aos-delay=(100*index)  data-aos-duration="1000")
+          +card02(item)
