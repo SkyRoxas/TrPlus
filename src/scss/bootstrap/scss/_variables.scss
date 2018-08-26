@@ -97,13 +97,13 @@ $paragraph-margin-bottom : 1rem;
 //
 // Define the minimum dimensions at which your layout will change,
 // adapting to different screen sizes, for use in media queries.
-$grid-breakpoints: ( xs: 0, sm: 576px, md: 768px, lg: 1440px, xl: 1920px);
+$grid-breakpoints: ( sm: 576px, md: 768px, lg: 1440px, xl: 1920px);
 @include _assert-ascending($grid-breakpoints, "$grid-breakpoints");
 @include _assert-starts-at-zero($grid-breakpoints);
 // Grid containers
 //
 // Define the maximum width of `.container` for different screen sizes.
-$container-max-widths: ( xs: 0, sm: 576px, md: 768px, lg: 1440px, xl: 1920px);
+$container-max-widths: ( sm: 576px, md: 768px, lg: 1440px, xl: 1920px);
 @include _assert-ascending($container-max-widths, "$container-max-widths");
 // Grid columns
 //
