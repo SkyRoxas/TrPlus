@@ -11,9 +11,11 @@ mixin card03(obj, col1 = "col-12", col2= "col-12")
     .card03.container
       .row
         .image.mb-4(class=col1)
-           img(src=obj.image)
+           a(href=obj.link)
+             img(src=obj.image)
         .wrap(class=col2)
           .title.pb-3.border-secondary(style="border-bottom: 3px solid" class=(col2 === 'col-12' ? 'mb-3' : 'mb-5'))
-             h3(class="text-secondary h4") !{obj.title}
+             a(href=obj.link)
+               h3(class="text-secondary h4") !{obj.title}
           .body(class="mb-3 text-light") !{obj.content}
    
