@@ -17,12 +17,13 @@ header {
         .inner-addon {
           position: relative;
           input {
-            padding-right: 45px;
+            padding-right: 40px;
             border-radius: 20px;
           }
           .btn {
+            border-radius: 50%;
             background: $white;
-            right: 15px;
+            right: 0;
             position: absolute;
           }
         }
@@ -30,13 +31,23 @@ header {
       .link-wrap {
         .cart {
           position: relative;
-          .badge {
-            color: $white;
-            background-color: $pink;
-            font-size: 12px;
-            right: -10px;
-            top: -10px;
+          .circle {
             position: absolute;
+            top: -5px;
+            right: -10px;
+            width: 12px;
+            height: 12px;
+            justify-content: center;
+            align-items: center;
+            border-radius: 100%;
+            text-align: center;
+            display: flex;
+            background-color: $pink;
+            color: $white;
+            .text {
+              font-size: 12px;
+              transform: scale(0.66);
+            }
           }
         }
       }
