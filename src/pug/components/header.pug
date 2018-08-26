@@ -1,21 +1,16 @@
 header
-    nav.navbar-light.bg-light
-        button(data-toggle="collapse" href="#collapseMenu" role="button" aria-expanded="false" aria-controls="collapseMenu")
-            img.open(src="./images/navbar-collapse-open.png", width="100" alt="")
-            img.close(src="./images/navbar-collapse-close.png", width="100" alt="")
-        a.navbar-brand(href='/')
-            img(src='./images/brand.png', width="150", alt='')
-        a.logo(href='/')
-            img(src='./images/logo.png', width="40", alt='')
-    .menu_wrapper.collapse#collapseMenu
-        ul.menu
-            li.menu_item.active
-                a.h2.font-weight-normal.mb-0(href="./news.html") 最新消息
-            li.menu_item
-                a.h2.font-weight-normal.mb-0(href="./about.html") 關於我們
-            li.menu_item
-                a.h2.font-weight-normal.mb-0(href="/introduction.html") 建案介紹
-            li.menu_item
-                a.h2.font-weight-normal.mb-0(href="./member.html") 會員專區
-            li.menu_item
-                a.h2.font-weight-normal.mb-0(href="./contact.html") 聯絡我們
+    .container
+        .wrap.d-flex.justify-content-between.align-items-center.py-4
+            .hoi-img.d-none.d-md-block
+                img(src='./images/header-img.jpg')
+            .search-wrap.d-flex.align-items-center
+                .search-container
+                    form(action="")
+                        .inner-addon.right-addon
+                            button.btn
+                                div 搜
+                            input.form-control.border.border-white(type="text" placeholder="搜尋")
+                .link-wrap
+                    a.d-none.d-md-inline-block.profile.pr-4.text-primary(href='/') 我的帳戶
+                    a.cart(href='/') 購物車
+                        span.badge.badge-pill 99
