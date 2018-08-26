@@ -2,6 +2,7 @@
   var card01Default= {
     title: '床組【UHO】秋原超省空間 3.5 尺床組二件組 (床頭是衣櫃+一抽床底)', 
     image: './images/card01.png',
+    hover: './images/hover.jpg',
     sale: '$ 99,999',
     price: '$ 99.999',
     link: './newsNode.html'
@@ -9,10 +10,15 @@
 
 mixin card02(obj)
   - obj = obj || card01Default
-  .card.card-02y(class="d-flex flex-column border-0")
-    .image
-       a(href=obj.link)
-         img(src=obj.image)
+  .card.card02(class="d-flex flex-column border-0")
+    .wrap.position-relative(style="overflow:hidden;")
+      if(obj.hover)
+        .hover
+          a(href=obj.link)
+            img(src=obj.hover)
+      .image
+         a(href=obj.link)
+           img(src=obj.image)
     .wrap(class="p-3")
       .title.mb-3
         h3(class="h4") 
