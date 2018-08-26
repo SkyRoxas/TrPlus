@@ -7,13 +7,27 @@
           position: absolute;
           left: 50%;
           top: 50%;
-          transform: translate(-50%, -30%);
+          transform: translate(-50%, -20%);
           .text {
+            font-size: 2rem;
             margin-bottom: 27px;
+            @include media-breakpoint-up(xl) {
+              font-size: 3rem;
+            }
           }
           .btn {
-            width: 370px;
-            margin: 0 auto
+            width: 200px;
+            font-size: 1rem;
+            @include media-breakpoint-up(xl) {
+              width: 370px;
+              font-size: 2rem;
+            }
+            margin: 0 auto;
+            border: 1px solid $white;
+            color: $white;
+            &:hover{
+              color: $cyan;
+            }
           }
         }
       }
