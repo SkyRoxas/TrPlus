@@ -1,22 +1,36 @@
-nav.navbar.navbar-expand-sm.navbar-light.bg-primary.sticky-top
+nav.navbar.navbar-expand-md.navbar-light.bg-primary.sticky-top
   .container
-    a.navbar-brand(href='#') Navbar
+    a.navbar-brand.pb-2(href='#') Navbar
     button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarNavDropdown', aria-controls='navbarNavDropdown', aria-expanded='false', aria-label='Toggle navigation')
       span.navbar-toggler-icon
     #navbarNavDropdown.collapse.navbar-collapse
       ul.navbar-nav
-        li.nav-item.active
-          a.nav-link(href='#')
-            | Home 
-            span.sr-only (current)
-        li.nav-item
-          a.nav-link(href='#') Features
-        li.nav-item
-          a.nav-link(href='#') Pricing
         li.nav-item.dropdown
-          a#navbarDropdownMenuLink.nav-link.dropdown-toggle(href='#', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
-            | Dropdown link
-          .dropdown-menu(aria-labelledby='navbarDropdownMenuLink')
-            a.dropdown-item(href='#') Action
-            a.dropdown-item(href='#') Another action
-            a.dropdown-item(href='#') Something else here
+          a#navbarDropdownMenuLink.nav-link.dropdown-toggle(href='http://example.com', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+            | Dropdown
+          ul.dropdown-menu(aria-labelledby='navbarDropdownMenuLink')
+            li
+              a.dropdown-item(href='#') Action
+            li
+              a.dropdown-item(href='#') Another action
+            li.dropdown-submenu
+              a.dropdown-item.dropdown-toggle(href='http://google.com') Google
+              ul.dropdown-menu
+                li
+                  a.dropdown-item(href='#') Submenu
+                li
+                  a.dropdown-item(href='#') Submenu0
+                li.dropdown-submenu
+                  a.dropdown-item.dropdown-toggle(href='#') Submenu 1
+                  ul.dropdown-menu
+                    li
+                      a.dropdown-item(href='#') Subsubmenu1
+                    li
+                      a.dropdown-item(href='#') Subsubmenu1
+                li.dropdown-submenu
+                  a.dropdown-item.dropdown-toggle(href='#') Submenu 2
+                  ul.dropdown-menu
+                    li
+                      a.dropdown-item(href='#') Subsubmenu2
+                    li
+                      a.dropdown-item(href='#') Subsubmenu2
