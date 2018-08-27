@@ -25,7 +25,7 @@
         each slide,index in slideData
           .item
             .wrap
-              img(src=slide.image)
+              .bg-img(style=`background-image: url('${slide.image}'); background-repeat: no-repeat;background-position: center center;background-size:cover;`)
               .text-wrap.d-flex.flex-column.justify-content-center
                 .text.text-white.text-center.font-weight-bold= slide.title
                 a.btn.py-3(href=slide.link)= slide.link_text

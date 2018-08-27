@@ -1,7 +1,14 @@
 #header-top {
   padding: 4px 0;
+  background-color: $cyan2;
+  @include media-breakpoint-up(sm) {
+    background-color: $white;
+  }
   .wrap {
-    height: 40px;
+    height: 20px;
+    @include media-breakpoint-up(sm) {
+      height: 40px;
+    }
     position: relative;
     .activity {
       color: $pink;

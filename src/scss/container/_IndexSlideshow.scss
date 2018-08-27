@@ -3,14 +3,33 @@
     .item {
       .wrap {
         position: relative;
+        .bg-img {
+          min-height: 320px;
+          @include media-breakpoint-up(sm) {
+            min-height: 400px;
+          }
+          @include media-breakpoint-up(md) {
+            min-height: 480px;
+          }
+          @include media-breakpoint-up(xl) {
+            min-height: 680px;
+          }
+        }
         .text-wrap {
           position: absolute;
           left: 50%;
-          top: 50%;
-          transform: translate(-50%, -20%);
+          bottom: 15%;
+          transform: translate(-50%);
+          @include media-breakpoint-up(sm) {
+            top: 50%;
+            transform: translate(-50%, -20%);
+          }
           .text {
             font-size: 2rem;
-            margin-bottom: 27px;
+            margin-bottom: 0px;
+            @include media-breakpoint-up(sm) {
+              margin-bottom: 27px;
+            }
             @include media-breakpoint-up(xl) {
               font-size: 3rem;
             }
@@ -18,6 +37,10 @@
           .btn {
             width: 200px;
             font-size: 1rem;
+            display: none;
+            @include media-breakpoint-up(sm) {
+              display: block;
+            }
             @include media-breakpoint-up(xl) {
               width: 370px;
               font-size: 2rem;
@@ -25,7 +48,7 @@
             margin: 0 auto;
             border: 1px solid $white;
             color: $white;
-            &:hover{
+            &:hover {
               color: $cyan;
             }
           }
@@ -48,22 +71,22 @@
         display: none;
       }
     }
-    .slick-dots{
+    .slick-dots {
       position: absolute;
       bottom: 20px;
-      .slick-active{
-        >button{
+      .slick-active {
+        >button {
           background-color: $cyan;
         }
       }
-      >li{
-        >button{
+      >li {
+        >button {
           border: 3px solid $white;
           border-radius: 50%;
-          &:hover{
+          &:hover {
             background-color: $cyan;
           }
-          &::before{
+          &::before {
             display: none;
           }
         }
