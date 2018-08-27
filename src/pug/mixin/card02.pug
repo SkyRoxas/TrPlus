@@ -10,7 +10,8 @@
 
 mixin card02(obj)
   - obj = obj || card01Default
-  .card.card02(class="d-flex flex-column border-0")
+  .card.card02.position-relative(class="d-flex flex-column border-0")
+    .slogan.bg-danger.text-white(class="p-1" style="position:absolute; left: 10px; top: 0px; z-index: 1;") HOT
     .wrap.position-relative(style="overflow:hidden;")
       if(obj.hover)
         .hover
@@ -19,13 +20,16 @@ mixin card02(obj)
       .image
          a(href=obj.link)
            img(src=obj.image)
-    .wrap(class="p-3")
+    .wrap
+      .tab.py-3
+        a(href=obj.link)
+          img(width="50px" src="./images/tab.png")
       .title.mb-3
         h3(class="h4") 
           a(class="text-secondary" href=obj.link) !{obj.title}
       .d-flex.justify-content-between.align-items-center
-        .price
-          span(class="text-secondary mr-4")=obj.sale
+        .price.d-flex.flex-column.flex-sm-row
+          div(class="text-secondary mr-4 h4 mb-0")=obj.sale
           del(class="text-light")=obj.price
         .cart.text-secondary.h3
           a(href="./cart.html")

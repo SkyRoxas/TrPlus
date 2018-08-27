@@ -1,20 +1,17 @@
 -
   var card01Default= {
         title: '起居空間大搜查',
-        sub: '經典沙發 5 折起',
         image: './images/card01.png',
         link: 'https://www.google.com.tw/'
   }
 
-mixin card01(obj)
+mixin card01(obj, position="pos-bottom")
   - obj = obj || card01Default
   .card.card-01.position-relative(class="border-0")
     a(href=obj.link)
       .image
          img(src=obj.image)
-      .wrap.position-absolute(class="p-3" style="bottom: 0;")
+      .wrap.position-absolute.p-3(class=position)
         .title(class="mb-2")
-           h3(class="display-2").text-white=obj.title
-        .sub
-          a.text-white=obj.sub
+           h3.text-white !{obj.title}
           

@@ -3,29 +3,48 @@ include ../../../mixin/card01.pug
 -
   var sloganData = {
     1:{ 
-      title: '起居空間大搜查',
-      sub: '經典沙發 5 折起',
+      title: '<div>起居空間大搜查</div><div class="h4">經典沙發 5 折起</div>',
       image: './images/card01.png',
       link: 'https://www.google.com.tw/'
       },
     2:{ 
-      title: '起居空間大搜查',
-      sub: '經典沙發 5 折起',
+      title: '<div>起居空間大搜查</div><div class="h4">經典沙發 5 折起</div>',
       image: './images/card01.png',
       link: 'https://www.google.com.tw/'
       },
     3:{ 
-      title: '起居空間大搜查',
-      sub: '經典沙發 5 折起',
+      title: '<div>起居空間大搜查</div><div class="h4">經典沙發 5 折起</div>',
       image: './images/card01.png',
+      link: 'https://www.google.com.tw/'
+      },
+    }
+    
+  var sloganDataMD = {
+    1:{ 
+      title: '<div class="text-center">起居空間大搜查</div><div class="h4 text-center">經典沙發 5 折起</div>',
+      image: './images/card03.jpg',
+      link: 'https://www.google.com.tw/'
+      },
+    2:{ 
+      title: '<div class="text-center">起居空間大搜查</div><div class="h4 text-center">經典沙發 5 折起</div>',
+      image: './images/card03.jpg',
+      link: 'https://www.google.com.tw/'
+      },
+    3:{ 
+      title: '<div class="text-center">起居空間大搜查</div><div class="h4 text-center">經典沙發 5 折起</div>',
+      image: './images/card03.jpg',
       link: 'https://www.google.com.tw/'
       },
     }
 
 
 #slogan-block
-  .container.py-5
-    ul.row.m-0.p-0
+  .container.py-md-5.pt-0
+    ul.row.m-0.p-0.d-none.d-md-flex
       each item, index in sloganData
-        li.d-flex.col-lg-4.col-md-6.mb-5(class=(index == 3 ? 'd-md-none d-lg-flex': '') data-aos="fade-right" data-aos-delay=(100*index)  data-aos-duration="1000")
+        li.d-flex.col-lg-4.col-md-6.mb-5(data-aos="fade-right" data-aos-delay=(100*index)  data-aos-duration="1000")
           +card01(item)
+    ul.row.m-0.p-0.d-flex.d-md-none
+      each item, index in sloganDataMD
+        li.d-flex.col-12(class=(index == 3 ? 'd-md-none d-lg-flex': '') data-aos="fade" data-aos-delay=(100)  data-aos-duration="1000")
+          +card01(item, 'pos-center')
