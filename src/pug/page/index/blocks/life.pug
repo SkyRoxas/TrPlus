@@ -24,31 +24,16 @@ include ../../../mixin/card03
         title: '<div>「世界最佳的餐廳」 捲土重來！</div><div>體驗食在丹麥的實驗餐桌，NOMA2.0</div>', 
         content: '#丹麥,#哥本哈根,#生活美學,#空間設計,#設計靈蓋,#餐廳',
         link: 'http://google.tw'      },
-    4:{ 
-        image: './images/card03.jpg',
-        title: '<div>「世界最佳的餐廳」 捲土重來！</div><div>體驗食在丹麥的實驗餐桌，NOMA2.0</div>', 
-        content: '#丹麥,#哥本哈根,#生活美學,#空間設計,#設計靈蓋,#餐廳',
-        link: 'http://google.tw'      },
-    5:{ 
-        image: './images/card03.jpg',
-        title: '<div>「世界最佳的餐廳」 捲土重來！</div><div>體驗食在丹麥的實驗餐桌，NOMA2.0</div>', 
-        content: '#丹麥,#哥本哈根,#生活美學,#空間設計,#設計靈蓋,#餐廳',
-        link: 'http://google.tw'      },
-    6:{ 
-        image: './images/card03.jpg',
-        title: '<div>「世界最佳的餐廳」 捲土重來！</div><div>體驗食在丹麥的實驗餐桌，NOMA2.0</div>', 
-        content: '#丹麥,#哥本哈根,#生活美學,#空間設計,#設計靈蓋,#餐廳',
-        link: 'http://google.tw'      },
   
    }
 
 #filter-block
   .container 
-    div(class="mb-md-5 mb-3 border-secondary" style="border-bottom: 3px solid;")
+    div(class="mb-4 border-secondary" style="border-bottom: 3px solid;")
       h2.block-title(class="h3 text-secondary text-center") HOI! MAGAZINE
     div(data-aos="fade-left" data-aos-delay=(100*index)  data-aos-duration="1000")
       +card03(lifeFirst,'col-md-6', 'col-md-6')
-    ul.row.p-0.mt-md-5.mt-3
+    ul.row.p-0.mt-3
       each item, index in lifeData
         li.d-flex.col-lg-4.col-md-6.mb-md-5.mb-3(data-aos="fade-left" data-aos-delay=(100*index)  data-aos-duration="1000")
           +card03(item)
