@@ -24,12 +24,12 @@ mixin card02(obj)
       .tab.py-3
         a(href=obj.link)
           img(width="50px" src="./images/tab.png")
-      .title.mb-3
+      .title.mb-1
         h3(class="h4") 
           a(class="text-secondary" href=obj.link) !{obj.title}
       .d-flex.justify-content-between.align-items-center
-        .price.d-flex.flex-column.flex-sm-row
-          div(class="text-secondary mr-4 h4 mb-0")=obj.sale
+        .price.d-flex.flex-column.flex-sm-row.align-items-center
+          div(class="text-secondary mr-sm-4 h4 mb-0")=obj.sale
           del(class="text-light")=obj.price
         .cart.text-secondary.h3
           a(href="./cart.html")
