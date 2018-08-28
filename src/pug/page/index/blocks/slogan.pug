@@ -46,5 +46,5 @@ include ../../../mixin/card01.pug
           +card01(item)
     ul.row.m-0.p-0.d-flex.d-md-none
       each item, index in sloganDataMD
-        li.d-flex.col-12(class=(index == 3 ? 'd-md-none d-lg-flex': '') data-aos="fade" data-aos-delay=(100)  data-aos-duration="1000")
+        li.d-flex.col-12(data-aos="fade" data-aos-delay=(100)  data-aos-duration="1000")
           +card01(item, 'pos-center')
