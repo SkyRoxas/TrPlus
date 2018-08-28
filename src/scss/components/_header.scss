@@ -1,5 +1,8 @@
 header {
   background-color: $gray-100;
+  @include media-breakpoint-up(lg) {
+    position:inherit !important;
+  }
   .container {
     .search-wrap {
       width: 100%;
