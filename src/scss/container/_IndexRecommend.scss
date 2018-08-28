@@ -1,0 +1,11 @@
+#recommend-block{
+  margin-bottom: 12px;
+  @include media-breakpoint-up(xl){
+    margin-bottom: 50px;
+  }
+  .container {
+    >.border-secondary {
+      margin-bottom: 30px;
+    }
+  }
+}

@@ -1,0 +1,6 @@
+#slogan-block{
+  margin: 7px 0 12px;
+  @include media-breakpoint-up(xl) {
+    margin: 20px 0 50px;
+  }
+}

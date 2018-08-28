@@ -1,48 +1,43 @@
-
-include ../../../mixin/card02.pug
+include ../../../mixin/card03
 
 -
-  var fulterDatas = {
-  1:{ 
-      title: '床組【UHO】秋原超省空間 3.5 尺床組二件組 (床頭是衣櫃+一抽床底)', 
-      image: './images/card01.png',
-      sale: '$ 99,999',
-      price: '$ 99.999',
-      link: './newsNode.html'
-    },
-  2:{ 
-      title: '床組【UHO】秋原超省空間 3.5 尺床組二件組 (床頭是衣櫃+一抽床底)', 
-      image: './images/card01.png',
-      sale: '$ 99,999',
-      price: '$ 99.999',
-      link: './newsNode.html'
-    },
-  3:{ 
-      title: '床組【UHO】秋原超省空間 3.5 尺床組二件組 (床頭是衣櫃+一抽床底)', 
-      image: './images/card01.png',
-      sale: '$ 99,999',
-      price: '$ 99.999',
-      link: './newsNode.html'
-    },
-  4:{ 
-      title: '床組【UHO】秋原超省空間 3.5 尺床組二件組 (床頭是衣櫃+一抽床底)', 
-      image: './images/card01.png',
-      sale: '$ 99,999',
-      price: '$ 99.999',
-      link: './newsNode.html'
-    },
+  var lifeFirst = {
+    image: './images/card03.jpg',
+    title: '<div>「世界最佳的餐廳」 捲土重來！</div><div>體驗食在丹麥的實驗餐桌，NOMA2.0</div>', 
+    content: '#丹麥,#哥本哈根,#生活美學,#空間設計,#設計靈蓋,#餐廳',
+    link: 'http://google.tw'
   }
+  
+  var lifeData = {
+    1:{ 
+        image: './images/card03.jpg',
+        title: '<div>「世界最佳的餐廳」 捲土重來！</div><div>體驗食在丹麥的實驗餐桌，NOMA2.0</div>', 
+        content: '#丹麥,#哥本哈根,#生活美學,#空間設計,#設計靈蓋,#餐廳',
+        link: 'http://google.tw'      },
+    2:{ 
+        image: './images/card03.jpg',
+        title: '<div>「世界最佳的餐廳」 捲土重來！</div><div>體驗食在丹麥的實驗餐桌，NOMA2.0</div>', 
+        content: '#丹麥,#哥本哈根,#生活美學,#空間設計,#設計靈蓋,#餐廳',
+        link: 'http://google.tw'      },
+    3:{ 
+        image: './images/card03.jpg',
+        title: '<div>「世界最佳的餐廳」 捲土重來！</div><div>體驗食在丹麥的實驗餐桌，NOMA2.0</div>', 
+        content: '#丹麥,#哥本哈根,#生活美學,#空間設計,#設計靈蓋,#餐廳',
+        link: 'http://google.tw'      },
+  
+   }
 
-
-#fulter-block.py-5
-  .container
-    .d-flex.justify-content-between.align-items-center(class="mb-5 border-secondary" style="border-bottom: 3px solid;")
-      i.fas.fa-arrow-left(class="text-secondary h3")
-      h2.block-title(class="h3 text-secondary") 編輯嚴選
-      i.fas.fa-arrow-right(class="text-secondary h3")
-        
-        
-    ul.row.m-0.p-0
-      each item, index in fulterDatas
-        li.d-flex.col-lg-3.col-md-6.col-6.mb-5(class=(index == 3 ? 'd-md-none d-lg-flex': '') data-aos="fade-left" data-aos-delay=(100*index)  data-aos-duration="1000")
-          +card02(item)
+#filter-block
+  .container 
+    div(class="border-secondary" style="border-bottom: 3px solid;")
+      h2.block-title(class="h3 text-secondary text-center") HOI! MAGAZINE
+    div(data-aos="fade-left" data-aos-delay=(100*index)  data-aos-duration="1000")
+      +card03(lifeFirst,'col-md-7', 'col-md-5')
+    ul.row.p-0.mt-3
+      each item, index in lifeData
+        li.d-flex.col-lg-4.col-md-6.mb-md-5.mb-3(data-aos="fade-left" data-aos-delay=(100*index)  data-aos-duration="1000")
+          +card03(item)
+    .more_btn.text-center
+      a.d-block.border-secondary(href="./index.html#contact" class="p-3 m-auto" style='width: 300px; border: 3px solid;') SEE MORE
+          
+            
