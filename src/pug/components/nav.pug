@@ -1,36 +1,58 @@
-nav.navbar.navbar-expand-md.navbar-light.bg-primary.sticky-top
+include ./../mixin/menu
+
+-
+ var mainMenu = {
+   type: 'menu',
+   activeIndex: 0,
+   items: [
+     {
+       name: '活動專區',
+       link: '/'
+     },
+     {
+       name: '傢俱',
+       link: '/'
+     },
+     {
+       name: '折價收納',
+       link: '/'
+     },
+     {
+       name: '寢具家飾',
+       link: '/'
+     },
+     {
+       name: '居家日用',
+       link: '/'
+     },
+     {
+       name: '家電',
+       link: '/'
+     },
+     {
+       name: '餐廚用品',
+       link: '/'
+     },
+     {
+       name: '美食',
+       link: '/'
+     },
+     {
+       name: 'HOI!好生活',
+       link: '/'
+     },
+     {
+       name: '門市活動',
+       link: '/'
+     }
+   ]
+ }
+
+nav.navbar.navbar-expand-md.navbar-light.bg-primary.sticky-top.p-0.d-lg-block.d-none
   .container
-    a.navbar-brand.pb-2(href='#') Navbar
-    button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarNavDropdown', aria-controls='navbarNavDropdown', aria-expanded='false', aria-label='Toggle navigation')
-      span.navbar-toggler-icon
-    #navbarNavDropdown.collapse.navbar-collapse
-      ul.navbar-nav
-        li.nav-item.dropdown
-          a#navbarDropdownMenuLink.nav-link.dropdown-toggle(href='http://example.com', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
-            | Dropdown
-          ul.dropdown-menu(aria-labelledby='navbarDropdownMenuLink')
-            li
-              a.dropdown-item(href='#') Action
-            li
-              a.dropdown-item(href='#') Another action
-            li.dropdown-submenu
-              a.dropdown-item.dropdown-toggle(href='http://google.com') Google
-              ul.dropdown-menu
-                li
-                  a.dropdown-item(href='#') Submenu
-                li
-                  a.dropdown-item(href='#') Submenu0
-                li.dropdown-submenu
-                  a.dropdown-item.dropdown-toggle(href='#') Submenu 1
-                  ul.dropdown-menu
-                    li
-                      a.dropdown-item(href='#') Subsubmenu1
-                    li
-                      a.dropdown-item(href='#') Subsubmenu1
-                li.dropdown-submenu
-                  a.dropdown-item.dropdown-toggle(href='#') Submenu 2
-                  ul.dropdown-menu
-                    li
-                      a.dropdown-item(href='#') Subsubmenu2
-                    li
-                      a.dropdown-item(href='#') Subsubmenu2
+    .row(style="width: 100%;")
+      .bg-white.text-primary.d-flex.align-items-center.px-3(style="cursor:pointer;")
+        i.fas.fa-bars.h3.m-0.mr-1
+        .ml-5.mr-3 商品分類
+      .col.d-flex-md
+        +menu(mainMenu)

@@ -1,4 +1,10 @@
 // import-jquery.js
-import jquery from 'jquery'
+import $ from 'jquery'
 
-export default window.$ = window.jQuery = jquery
+
+export default window.$ = window.jQuery = $
+
+
+$(document).ready(function(){
+  $('.fixed-menu').hide()
+})
