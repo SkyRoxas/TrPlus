@@ -14,5 +14,7 @@ import 'lightbox2/dist/css/lightbox.min.css'
 // GitHub: https://github.com/michalsnik/aos
 
 window.addEventListener('load', () => {
-    AOS.init()
+    AOS.init({
+      disable: true
+    })
 })

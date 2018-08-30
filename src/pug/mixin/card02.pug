@@ -10,7 +10,7 @@
 
 mixin card02(obj)
   - obj = obj || card01Default
-  .card.card02.position-relative(class="d-flex flex-column border-0")
+  .card02.position-relative(class="d-flex flex-column border-0")
     .slogan.bg-danger.text-white(class="p-1" style="position:absolute; left: 10px; top: 0px; z-index: 1;") HOT
     .wrap.position-relative(style="overflow:hidden;")
       if(obj.hover)
@@ -23,7 +23,7 @@ mixin card02(obj)
     .wrap
       .tab.py-3
         a(href=obj.link)
-          img(width="50px" src="./images/tab.png")
+          img(src="./images/tab.png")
       .title.mb-1
         h3(class="h4") 
           a(class="text-secondary" href=obj.link) !{obj.title}

@@ -73,11 +73,16 @@ include ../../../mixin/card02.pug
 #popular-block
   .container
     .d-flex.justify-content-between.align-items-center(class="border-secondary" style="border-bottom: 3px solid;")
-      i.fas.fa-arrow-left(class="text-secondary h3")
+      
+      .pointer
+        img(width="55px" src="./images/left-light-btn.png")
+          
       h2.block-title(class="h3 text-secondary") 
         | 熱銷商品
         span.h4.ml-2.text-light HOT SALE
-      i.fas.fa-arrow-right(class="text-secondary h5")
+      
+      .pointer
+        img(width="55px" src="./images/right-light-btn.png")
         
     ul.row.m-0.p-0
       each item, index in popularDatas
