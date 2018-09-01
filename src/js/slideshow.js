@@ -2,7 +2,7 @@ import 'slick-carousel'
 import $ from 'jquery'
 
 $(function() {
-  $('#slideshow').slick({
+  $('.slick').slick({
     dots: true,
     autoplay: true,
     mobileFirst: true,

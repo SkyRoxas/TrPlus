@@ -1,0 +1,50 @@
+include ../../../mixin/card01.pug
+
+-
+  var sloganData = {
+    1:{ 
+      title: '<div>起居空間大搜查</div><div class="h4">經典沙發 5 折起</div>',
+      image: './images/card01.png',
+      link: 'https://www.google.com.tw/'
+      },
+    2:{ 
+      title: '<div>起居空間大搜查</div><div class="h4">經典沙發 5 折起</div>',
+      image: './images/card01.png',
+      link: 'https://www.google.com.tw/'
+      },
+    3:{ 
+      title: '<div>起居空間大搜查</div><div class="h4">經典沙發 5 折起</div>',
+      image: './images/card01.png',
+      link: 'https://www.google.com.tw/'
+      },
+    }
+    
+  var sloganDataMD = {
+    1:{ 
+      title: '<div class="text-center">起居空間大搜查</div><div class="h4 text-center">經典沙發 5 折起</div>',
+      image: './images/card03.jpg',
+      link: 'https://www.google.com.tw/'
+      },
+    2:{ 
+      title: '<div class="text-center">起居空間大搜查</div><div class="h4 text-center">經典沙發 5 折起</div>',
+      image: './images/card03.jpg',
+      link: 'https://www.google.com.tw/'
+      },
+    3:{ 
+      title: '<div class="text-center">起居空間大搜查</div><div class="h4 text-center">經典沙發 5 折起</div>',
+      image: './images/card03.jpg',
+      link: 'https://www.google.com.tw/'
+      },
+    }
+
+
+#slogan-block
+  .container
+    ul.row.m-0.p-0.d-none.d-md-flex
+      each item, index in sloganData
+        li.d-flex.col-4.my-3.my-lg-0(data-aos="fade-right" data-aos-delay=(100*index)  data-aos-duration="1000")
+          +card01(item)
+    ul.row.m-0.p-0.d-flex.d-md-none
+      each item, index in sloganDataMD
+        li.d-flex.col-12(data-aos="fade" data-aos-delay=(100)  data-aos-duration="1000")
+          +card01(item, 'pos-center')

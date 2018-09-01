@@ -1,19 +1,19 @@
 .slideshow_block {
-  #slideshow {
+  #ArchiveSlideshow {
     .item {
       .wrap {
         position: relative;
         .bg-img {
           min-height: 320px;
-          @include media-breakpoint-up(sm) {
-            min-height: 400px;
-          }
-          @include media-breakpoint-up(md) {
-            min-height: 480px;
-          }
-          @include media-breakpoint-up(xl) {
-            min-height: 680px;
-          }
+          // @include media-breakpoint-up(sm) {
+          //   min-height: 400px;
+          // }
+          // @include media-breakpoint-up(md) {
+          //   min-height: 480px;
+          // }
+          // @include media-breakpoint-up(xl) {
+          //   min-height: 680px;
+          // }
         }
         .text-wrap {
           position: absolute;

@@ -2,60 +2,52 @@
 include ../../../mixin/card02.pug
 
 -
-  var popularDatas = {
+  var fulterDatas = {
   1:{ 
       title: '床組【UHO】秋原超省空間 3.5 尺床組二件組 (床頭是衣櫃+一抽床底)', 
       image: './images/card01.png',
       sale: '$ 99,999',
       price: '$ 99.999',
-      link: './newsNode.html',
-      hover: './images/hover.jpg'
+      link: './newsNode.html'
     },
   2:{ 
       title: '床組【UHO】秋原超省空間 3.5 尺床組二件組 (床頭是衣櫃+一抽床底)', 
       image: './images/card01.png',
       sale: '$ 99,999',
       price: '$ 99.999',
-      link: './newsNode.html',
-      hover: './images/hover.jpg'
+      link: './newsNode.html'
     },
   3:{ 
       title: '床組【UHO】秋原超省空間 3.5 尺床組二件組 (床頭是衣櫃+一抽床底)', 
       image: './images/card01.png',
       sale: '$ 99,999',
       price: '$ 99.999',
-      link: './newsNode.html',
-      hover: './images/hover.jpg'
+      link: './newsNode.html'
     },
   4:{ 
       title: '床組【UHO】秋原超省空間 3.5 尺床組二件組 (床頭是衣櫃+一抽床底)', 
       image: './images/card01.png',
       sale: '$ 99,999',
       price: '$ 99.999',
-      link: './newsNode.html',
-      hover: './images/hover.jpg'
-    }
+      link: './newsNode.html'
+    },
   }
 
 
-#popular-block
+#fulter-block.py-5
   .container
-    .d-flex.justify-content-between.align-items-center(class="border-secondary" style="border-bottom: 3px solid;")
+    .d-flex.justify-content-between.align-items-center(class="mb-5 border-secondary" style="border-bottom: 3px solid;")
       
       .pointer
         img(width="55px" src="./images/left-light-btn.png")
           
-      h2.block-title(class="h3 text-secondary mb-0" style="white-space: nowrap;") 
-        | 熱銷商品
-        span.h4.ml-2.text-light HOT SALE
+      h2.block-title(class="h3 text-secondary mb-0" style="white-space: nowrap;")  編輯嚴選
       
       .pointer
         img(width="55px" src="./images/right-light-btn.png")
         
+        
     ul.row.m-0.p-0
-      each item, index in popularDatas
-        li.d-flex.col-lg-3.col-6.mb-4(data-aos="fade-left" data-aos-delay=(100*index)  data-aos-duration="1000")
+      each item, index in fulterDatas
+        li.d-flex.col-lg-3.col-md-6.col-6.mb-5(class=(index == 3 ? 'd-md-none d-lg-flex': '') data-aos="fade-left" data-aos-delay=(100*index)  data-aos-duration="1000")
           +card02(item)
-          
-    .more_btn.text-center
-      a.d-block.border-secondary(href="./index.html#contact" class="p-3 m-auto" style='width: 280px; border: 3px solid;') SEE MORE

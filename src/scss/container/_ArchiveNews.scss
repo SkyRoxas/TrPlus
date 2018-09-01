@@ -1,0 +1,11 @@
+#popular-block {
+  margin-bottom: 30px;
+  @include media-breakpoint-up(xl) {
+    margin-bottom: 50px;
+  }
+  .container {
+    >.border-secondary {
+      margin-bottom: 30px;
+    }
+  }
+}
