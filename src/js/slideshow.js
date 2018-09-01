@@ -1,19 +1,17 @@
-import 'slick-carousel';
+import 'slick-carousel'
+import $ from 'jquery'
 
 $(function() {
   $('#slideshow').slick({
     dots: true,
     autoplay: true,
-    mobileFirst:true,
-    arrows:false,
-    responsive:[
-      {
-        breakpoint: 575,
-        settings: {
-          arrows:true
+    mobileFirst: true,
+    arrows: false,
+    responsive: [{
+      breakpoint: 575,
+      settings: {
+        arrows: true
       }
-      }
-    ]
+    }]
   })
 })
-
