@@ -1,0 +1,45 @@
+
+include ../../../mixin/card02.pug
+
+-
+  var maylikeDatas = {
+  1:{ 
+      title: '床組【UHO】秋原超省空間 3.5 尺床組二件組 (床頭是衣櫃+一抽床底)', 
+      image: './images/card01.png',
+      sale: '$ 99,999',
+      price: '$ 99.999',
+      link: './newsNode.html'
+    },
+  2:{ 
+      title: '床組【UHO】秋原超省空間 3.5 尺床組二件組 (床頭是衣櫃+一抽床底)', 
+      image: './images/card01.png',
+      sale: '$ 99,999',
+      price: '$ 99.999',
+      link: './newsNode.html'
+    },
+  3:{ 
+      title: '床組【UHO】秋原超省空間 3.5 尺床組二件組 (床頭是衣櫃+一抽床底)', 
+      image: './images/card01.png',
+      sale: '$ 99,999',
+      price: '$ 99.999',
+      link: './newsNode.html'
+    },
+  4:{ 
+      title: '床組【UHO】秋原超省空間 3.5 尺床組二件組 (床頭是衣櫃+一抽床底)', 
+      image: './images/card01.png',
+      sale: '$ 99,999',
+      price: '$ 99.999',
+      link: './newsNode.html'
+    },
+  }
+
+
+#maylike-block
+  .container
+    .d-flex.justify-content-between.align-items-center(class="border-secondary" style="border-bottom: 3px solid;")
+      h2.block-title(class="h3 text-secondary mb-0" style="white-space: nowrap;")  其他人也買了
+        
+    ul.row.m-0.p-0
+      each item, index in maylikeDatas
+        li.d-flex.col-lg-3.col-6.my-3.my-lg-0(data-aos="fade-left" data-aos-delay=(100*index)  data-aos-duration="1000")
+          +card02(item)
