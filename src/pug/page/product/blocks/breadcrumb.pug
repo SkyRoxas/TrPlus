@@ -1,0 +1,27 @@
+include ../../../mixin/breadcrumb.pug
+
+-
+  var obj = {
+    1:{
+      title:'特力+',
+      link:'/',
+      current:false
+    },
+    2:{
+      title:'家電淨水',
+      link:'/',
+      current:false
+    },
+    3:{
+      title:'冷暖空調',
+      link:'/',
+      current:false
+    },
+    4:{
+      title:'分離式變頻-冷暖',
+      link:'/',
+      current:true
+    }
+  }
+
++breadcrumb(obj)

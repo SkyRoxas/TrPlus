@@ -1,0 +1,30 @@
+-
+  var defaultData= {
+    1:{
+      title:'Home',
+      link:'/',
+      current:false
+    },
+    2:{
+      title:'Home',
+      link:'/',
+      current:false
+    },
+    3:{
+      title:'Home',
+      link:'/',
+      current:true
+    },
+  }
+
+mixin breadcrumb(obj)
+  - obj = obj || defaultData
+  .container
+    nav(aria-label="breadcrumb")
+      ol.breadcrumb
+        each item, index in obj
+          if(item.current === true)
+            li.breadcrumb-item.active(aria-current="page")=item.title
+          else
+            li.breadcrumb-item
+              a(href=item.link)=item.title
