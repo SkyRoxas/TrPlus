@@ -1,0 +1,13 @@
+.drop-menu{
+   > li.nav-item.show{
+     >a.nav-link{
+       background: $primary;
+     }
+   }
+}
+
+.dropdown-toggle{
+  &:after{
+    display: none;
+  }
+}
