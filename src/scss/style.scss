@@ -15,6 +15,7 @@
 @import "./components/header";
 @import "./components/footer";
 @import "./components/first_sidbar";
+@import "./components/breadcrumb";
 @import "./components/menu/tab";
 @import "./components/menu/drop";
 @import "./components/menu/fixed";
@@ -34,4 +35,7 @@
 @import "./container/ArchiveProducts";
 
 //Archive
-@import "./container/ArchiveSlideshow"
+@import "./container/ArchiveSlideshow";
+
+//Product
+@import "./container/ProductSlide";

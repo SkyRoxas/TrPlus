@@ -51,8 +51,9 @@ include ./../mixin/menu
 nav.navbar.navbar-expand-md.navbar-light.bg-primary.sticky-top.p-0.d-lg-block.d-none
   .container
     .row(style="width: 100%;")
-      .bg-white.text-primary.d-flex.align-items-center.px-3(style="cursor:pointer;")
-        i.fas.fa-bars.h3.m-0.mr-1
-        .ml-5.mr-3 商品分類
-      .col.d-flex-md
-        +menu(mainMenu)
+      .col.d-flex
+        .bg-white.text-primary.d-flex.align-items-center.px-3(style="cursor:pointer;")
+          i.fas.fa-bars.h3.m-0.mr-1
+          .ml-5.mr-3 商品分類
+        .col.d-flex-md
+          +menu(mainMenu)

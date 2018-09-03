@@ -1,0 +1,12 @@
+.breadcrumb-nav{
+  margin: 30px auto;
+  .breadcrumb{
+    background-color: inherit;
+  }
+  a{
+    color: $cyan3;
+    &:hover{
+      color: $cyan;
+    }
+  }
+}

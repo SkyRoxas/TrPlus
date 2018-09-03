@@ -19,9 +19,8 @@
 
 mixin breadcrumb(obj)
   - obj = obj || defaultData
-  .container
-    nav(aria-label="breadcrumb")
-      ol.breadcrumb
+    nav.breadcrumb-nav.container(aria-label="breadcrumb")
+      ol.breadcrumb.row.h4
         each item, index in obj
           if(item.current === true)
             li.breadcrumb-item.active(aria-current="page")=item.title
