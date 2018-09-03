@@ -6,23 +6,15 @@ mixin pager(num, theme)
     
   if theme === 'primary'
     .pager.d-flex.align-items-center(class=theme)
-      .prew.mr-4
-        a.icon.arrow-left-primary
+      .prew.mr-2
+        .pointer
+          img(width="55px" src="./images/left-light-btn.png")
       ul.d-flex.p-0.m-0
         while i <= num
-          li.d-block(class=(i != 1 ? 'ml-1' : ''))
-            a.px-3.py-2(class=(i == 1 ? 'bg-primary text-white' : 'text-primary') href="/")=i++
-      .next.ml-4
-        a.icon.arrow-right-primary
-          
-  if theme === 'white'
-    .pager.d-flex.align-items-center(class=theme)
-      .prew.mr-4
-        a.icon.arrow-left-white
-      ul.d-flex.p-0.m-0
-        while i <= num
-          li.d-block(class=(i != 1 ? 'ml-1' : ''))
-            a.px-3.py-2(class=(i == 1 ? 'bg-white text-primary' : 'text-white') href="/")=i++
-      .next.ml-4
-        a.icon.arrow-right-white
+          li.d-block(class=(i != 1 ? 'ml-2' : ''))
+            a.px-1.py-2.rounded-circle.d-flex.align-items-center.justify-content-center(class=(i == 1 ? 'bg-danger text-white' : 'bg-white text-primary') href="/" style="width:35px; height:35px;")=i++
+      .next.ml-2
+        .pointer
+          img(width="55px" src="./images/right-light-btn.png")
+
       

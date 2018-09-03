@@ -1,0 +1,57 @@
+include ../../../mixin/menu.pug
+
+
+-
+  var categroyDropMenu = {
+    type: 'drop',
+    items: [
+      {
+        name: '選擇類別',
+        link: '',
+        align: 'left',
+        subs: [
+          {
+            name: '衣物收納',
+            link: '/'
+          },
+          {
+            name: '衛浴收納',
+            link: '/'
+          }
+        ]
+      },
+      {
+        name: '選擇品牌',
+        link: '/',
+        align: 'left',
+        subs:[
+          {
+            name: '衣物收納',
+            link: '/'
+          },
+          {
+            name: '衛浴收納',
+            link: '/'
+          }
+        ]
+      },
+      {
+        name: '排序',
+        link: '/',
+        align: 'right',
+        subs:[
+          {
+            name: '日期',
+            link: '/'
+          },
+          {
+            name: '價格',
+            link: '/'
+          }
+        ]
+      }
+    ]
+  }
+
+.container
+  +menu(categroyDropMenu)
