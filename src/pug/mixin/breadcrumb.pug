@@ -1,29 +1,30 @@
 -
-  var defaultData= {
-    1:{
-      title:'Home',
-      link:'/',
-      current:false
-    },
-    2:{
-      title:'Home',
-      link:'/',
-      current:false
-    },
-    3:{
-      title:'Home',
-      link:'/',
-      current:true
-    },
-  }
+  var breadcrumbs = [
+    {
+      name:'特力+',
+      link: ''
 
-mixin breadcrumb(obj)
-  - obj = obj || defaultData
-    nav.breadcrumb-nav.container(aria-label="breadcrumb")
-      ol.breadcrumb.row.h4
-        each item, index in obj
-          if(item.current === true)
-            li.breadcrumb-item.active(aria-current="page")=item.title
-          else
-            li.breadcrumb-item
-              a(href=item.link)=item.title
+    },
+    {
+      name:'特力和樂',
+      link: ''
+
+    },
+    {
+      name:'傢俱收納',
+      link: ''
+
+    },
+  ]
+
+mixin breadcrumb(arr)
+  - arr = arr || breadcrumbs
+  ul.d-flex.p-0.m-0
+    each item, idx in arr
+      li.d-block
+        a(href=item.link)=item.name
+      if((idx + 1) !== breadcrumbs.length)
+        .px-1 /
+
+
+

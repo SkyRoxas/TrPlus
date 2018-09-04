@@ -1,18 +1,26 @@
-extends ./../../layouts/sidebarfirst
+extends ./../../layouts/default
+
 block head
     title 特力家購物網
 
 block content
-    h1(style="display:none") 首頁
-    include blocks/slideshow
     
-    include blocks/products
+    .container
+      include blocks/breadcrumb
+      .row
+        .col-lg-2.col-24
+          include ./../../components/sidebarfirst
+        .col-lg-10.col-24
+          include blocks/slideshow
+          
+          include blocks/products
+          
+          include blocks/news
+          
+          include blocks/popular
+          
+          include blocks/popular
+          
+          include blocks/maylike
     
-    include blocks/news
-    
-    include blocks/popular
-    
-    include blocks/popular
-    
-    include blocks/maylike
   
