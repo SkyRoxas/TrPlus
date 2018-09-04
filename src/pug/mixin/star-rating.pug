@@ -1,0 +1,7 @@
+
+mixin rating(total,rating)
+  - total = total || 5
+  - rating = rating || 0
+  .rate
+    - for (var j=0; j<total; j++)
+        i.fa.fa-star(class=(j<rating ? 'checked' : ''))

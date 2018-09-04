@@ -1,3 +1,5 @@
+include ../../../mixin/star-rating.pug
+
 .container.product-node
   .row.justify-content-center.justify-content-lg-start
     .col-12.col-sm-10.col-lg-6
@@ -28,4 +30,11 @@
         .item
           img.w-100.img-fluid(src='./images/product-slide-small.jpg')
     .col-6
-      .info 123
+      .info
+        .product-name.h3 一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一
+        .wrap.d-flex.justify-content-between
+          .sku.d-flex.text-muted
+            .label 商品編號:
+            .value 014175830
+          .rate-wrap
+            +rating(5,3)
