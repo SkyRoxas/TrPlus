@@ -29,12 +29,27 @@ include ../../../mixin/star-rating.pug
           img.w-100.img-fluid(src='./images/product-slide-small.jpg')
         .item
           img.w-100.img-fluid(src='./images/product-slide-small.jpg')
-    .col-6
+    .col-12.col-sm-10.col-lg-6
       .info
         .product-name.h3 一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一
-        .wrap.d-flex.justify-content-between
+        .wrap.d-flex.justify-content-between.mb-2
           .sku.d-flex.text-muted
             .label 商品編號:
             .value 014175830
           .rate-wrap
             +rating(5,3)
+        .wrap.mb-5
+          .exclusive 線上獨賣
+        .price-wrap.d-flex.mb-5
+          .offer-wrap.mr-5
+            .label.pt-1.h4 優惠價
+            .offer-price.h2 $ 12,399
+          .web-wrap.mr-5
+            .label.pt-1.h4 網路價
+            .web-price.h3 $ 16,999
+          .original-wrap.mr-5
+            .label.pt-1.h4 建議售價
+            .original-price.h3 $ 21,999
+          .promotions-wrap.mr-5
+            .label.pt-1.h4 優惠活動
+            .body 床寢傢俱 滿 3,000 現折 300
