@@ -1,0 +1,20 @@
+// https://github.com/pugjs/pug/issues/1693
+
+mixin card05()
+  - var slots = {};
+  
+  // general mixin slot
+  mixin slot(name)
+    - slots[name] = block
+    
+  block
+  
+  .card05.bg-white
+    if slots['header']
+      .title.bg-light.p-3
+        - slots['header'](); 
+    if slots['body']
+      .body.p-5
+        - slots['body']();
+         
+         
