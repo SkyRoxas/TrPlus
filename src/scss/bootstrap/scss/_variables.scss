@@ -44,7 +44,8 @@ $success : $green;
 $info : $cyan;
 $warning : $yellow;
 $danger : $red;
-$light : $gray-500;
+// $light : $gray-500;
+$light : #f2f2f2;
 $dark : $gray-800;
 $theme-colors: ();
 // stylelint-disable-next-line scss/dollar-variable-default
