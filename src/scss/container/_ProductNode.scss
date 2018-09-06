@@ -1,0 +1,27 @@
+.product-node{
+  .info{
+    .price-wrap{
+      color: $cyan3;
+      .offer-price{
+        color: $orange;
+      }
+      .web-price,.original-price{
+        text-decoration: line-through;
+        color: $gray;
+      }
+      .promotions-wrap{
+        position: relative;
+        padding-left: 11px;
+        &:before{
+          left: 0;
+          position: absolute;
+          content: '';
+          display: block;
+          height: 60px;
+          width: 2px;
+          background-color: $pink;
+        }
+      }
+    }
+  }
+}
