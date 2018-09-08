@@ -3,10 +3,10 @@ include ../../../mixin/star-rating.pug
 
 
 mixin commit()
-  .px-5.pt-2.pb-4.bg-light.text-secondary
+  .px-md-5.px-3.pt-2.pb-4.bg-light.text-secondary
     .container.p-0
       .row
-        .col-7.d-flex.justify-content-between.mb-2
+        .col-md-7.col-12.d-flex.flex-md-nowrap.flex-wrap.justify-content-between.mb-2
           .user 王＊明
           .rate 
             +rating(5,3)
@@ -15,17 +15,17 @@ mixin commit()
             span 購買規格：
             span 黑色 / S
       .row
-        .col-7
-          .d-flex
-            .title.mr-3 評論留言
+        .col-md-7.col-12
+          .d-md-flex.d-block
+            .title.mr-3.mb-1 評論留言
             .commit
               p 
-                | 皮夾材質很不錯，比想像中還要好！
+                | 皮夾材質很不錯,比想像中還要好!
                 br
-                | 雖然設計師說有稍微晚到貨，所以另外附贈小禮物。
+                | 雖然設計師說有稍微晚到貨,所以另外附贈小禮物.
                 br
-                | 有機會會在多逛逛這裡，希望有更所商品可以訂購！
-        .col-5
+                | 有機會會在多逛逛這裡,希望有更所商品可以訂購!
+        .col-md-5.col-12
           .container.p-0
             .row
               .col
@@ -36,7 +36,7 @@ mixin commit()
                 img(src='./images/product-slide-small.jpg')
                   
 mixin reply()
-  .px-5.pt-2.text-secondary
+  .px-md-5.px-3.pt-2.text-secondary
     .user.mb-2 特力＋回覆
     .commit
       p 皮夾材質很不錯，比想像中還要好！ 雖然設計師說有稍微晚到貨，所以另外附贈小禮物。 有機會會在多逛逛這裡，希望有更所商品可以訂購！
@@ -51,7 +51,7 @@ mixin reply()
   +slot('body')
     .container
       .row
-        .col-3
+        .col-md-3.col-12.mb-5
           .bg-light.p-5.mb-5.d-flex.flex-column.align-items-center
             .h1.bg-light.mb-0 符合期待
             .mb-3.text-danger(style="font-size: 50px;") 4.1
@@ -59,7 +59,7 @@ mixin reply()
               +rating(5,3)
           .bg-primary.text-white.p-4.text-center
             div 我要評論
-        .col-9
+        .col-md-9.col-12
           div(style="max-width: 760px")
             .commit.mb-5
               -var n = 0
