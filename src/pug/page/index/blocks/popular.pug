@@ -79,12 +79,12 @@ include ../../../mixin/card02.pug
           
       h2.block-title(class="h3 text-secondary mb-0" style="white-space: nowrap;") 
         | 熱銷商品
-        span.h4.ml-2.text-light HOT SALE
+        span.h4.ml-2(style="color:#C3C7C8;") HOT SALE
       
       .pointer
         img(width="55px" src="./images/right-light-btn.png")
         
-    ul.row.m-0.p-0
+    ul.row.p-0
       each item, index in popularDatas
         li.d-flex.col-lg-3.col-6.mb-4(data-aos="fade-left" data-aos-delay=(100*index)  data-aos-duration="1000")
           +card02(item)

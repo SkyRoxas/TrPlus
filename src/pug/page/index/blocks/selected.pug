@@ -47,7 +47,7 @@ include ../../../mixin/card02.pug
         img(width="55px" src="./images/right-light-btn.png")
         
         
-    ul.row.m-0.p-0
+    ul.row.p-0
       each item, index in fulterDatas
         li.d-flex.col-lg-3.col-md-6.col-6.mb-5(class=(index == 3 ? 'd-md-none d-lg-flex': '') data-aos="fade-left" data-aos-delay=(100*index)  data-aos-duration="1000")
           +card02(item)

@@ -40,11 +40,11 @@ include ../../../mixin/card01.pug
 
 #slogan-block
   .container
-    ul.row.m-0.p-0.d-none.d-md-flex
+    ul.row.p-0.d-none.d-md-flex
       each item, index in sloganData
         li.d-flex.col-4.my-3.my-lg-0(data-aos="fade-right" data-aos-delay=(100*index)  data-aos-duration="1000")
           +card01(item)
-    ul.row.m-0.p-0.d-flex.d-md-none
+    ul.row.p-0.d-flex.d-md-none
       each item, index in sloganDataMD
         li.d-flex.col-12(data-aos="fade" data-aos-delay=(100)  data-aos-duration="1000")
           +card01(item, 'pos-center')
