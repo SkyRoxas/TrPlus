@@ -1,27 +1,24 @@
 include ../../../mixin/breadcrumb.pug
 
 -
-  var obj = {
-    1:{
-      title:'特力+',
+  var productBreadcrumb = [
+    {
+      name:'特力+',
       link:'/',
-      current:false
     },
-    2:{
-      title:'家電淨水',
+    {
+      name:'家電淨水',
       link:'/',
-      current:false
     },
-    3:{
-      title:'冷暖空調',
+    {
+      name:'冷暖空調',
       link:'/',
-      current:false
     },
-    4:{
-      title:'分離式變頻-冷暖',
+    {
+      name:'分離式變頻-冷暖',
       link:'/',
-      current:true
     }
-  }
-
-+breadcrumb(obj)
+  ]
+  
+.breadcrumb.my-4.bg-none.py-3.px-0
+  +breadcrumb(productBreadcrumb, 'text-secondary')

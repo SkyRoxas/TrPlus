@@ -1,4 +1,66 @@
 include ../../../mixin/star-rating.pug
+include ../../../mixin/tab
+
+
+-
+  var productTabs = [
+    {
+      name: 'doc',
+      label: '商品描述'
+    },
+    {
+      name: 'rate',
+      label: '滿額最高享 12 期 0 利率'
+    },
+    {
+      name: 'payMethod',
+      label: '付款方式及免運門檻'
+    },
+    {
+      name: 'state',
+      label: '貨況查詢'
+    }
+  ]
+
+mixin productTab()
+  +tab(productTabs)
+    +slot('doc')
+      .container.p-0
+        .row
+          .col-6
+            .body
+              p 
+                | 尺寸：長 300 x 寬 200 x 高 200
+                br
+                | (單位：公分)
+              
+              ul
+                li 日本精緻公益免組裝，即買即用 四層抽屜收納櫃，大容量抽屜
+                li 超靜音貼紙劃歸，使用順暢
+                li 封閉式櫃體
+          .col-6
+            p 特規商品延伸費用
+            .container.p-0
+              .row
+                .col
+                  .p-2.text-center.bg-white
+                    .mb-2 超材計費
+                    .price.small +$100
+                .col
+                  .p-2.text-center.bg-white
+                    .mb-2 超材計費
+                    .price.small +$100
+                .col
+                  .p-2.text-center.bg-white
+                    .mb-2 超材計費
+                    .price.small +$100
+    +slot('rate')
+      p rate
+    +slot('payMethod')
+      p doc
+    +slot('state')
+      p rate    
+
 
 .container.product-node
   .row.justify-content-center.justify-content-lg-start
@@ -53,3 +115,7 @@ include ../../../mixin/star-rating.pug
           .promotions-wrap
             .label.pt-1.mb-3.h4 優惠活動
             .body.pt-1.h4 床寢傢俱 滿 3,000 現折 300
+      .productTab.mb-3
+        +productTab()
+      .bn
+        img(src="./images/bn.png")

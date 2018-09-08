@@ -1,0 +1,35 @@
+// https://github.com/pugjs/pug/issues/1693
+
+-
+ var tabs = [
+   {
+     name: 'doc',
+     label: '商品描述'
+   },
+   {
+     name: 'rate',
+     label: '滿額最高享 12 期 0 利率'
+   }
+ ]
+
+mixin tab(arr)
+  - arr = arr || tabs
+  - var slots = {};
+  
+  ul.nav.nav-tabs.mb-5.d-flex.justify-content-between.border-0
+    each item, idx in arr
+      li.border-secondary(class=(idx == 0 && 'active') style="border-bottom: 2px solid;")
+        a.px-2(data-toggle="tab" href=('#' + item.name) )=item.label
+  
+  // general mixin slot
+  mixin slot(name)
+    - slots[name] = block
+    
+  block
+    
+  .tab-content(style="min-height: 120px")
+    each item, idx in arr
+      if slots[item.name]
+        .tab-pane.fade(id=item.name class=(idx == 0 && "in active show"))
+          - slots[item.name](); 
+         

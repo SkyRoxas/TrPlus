@@ -26,7 +26,7 @@ $(function() {
   $('.slider-nav').slick({
     slidesToShow: 3,
     slidesToScroll: 1,
-    rows:2,
+    rows: 2,
     mobileFirst: true,
     autoplay: true,
     asNavFor: '.slider-for',
@@ -35,7 +35,7 @@ $(function() {
       breakpoint: 1200,
       settings: {
         slidesToShow: 6,
-        rows:1,
+        rows: 1,
       }
     }]
   })

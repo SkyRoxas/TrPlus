@@ -13,18 +13,14 @@
     {
       name:'傢俱收納',
       link: ''
-
     },
   ]
 
-mixin breadcrumb(arr)
+mixin breadcrumb(arr, className)
   - arr = arr || breadcrumbs
   ul.d-flex.p-0.m-0
     each item, idx in arr
       li.d-block
-        a(href=item.link)=item.name
-      if((idx + 1) !== breadcrumbs.length)
-        .px-1 /
-
-
-
+        a(class=className href=item.link)=item.name
+      if((idx + 1) !== arr.length)
+        .px-1(class=className) /
