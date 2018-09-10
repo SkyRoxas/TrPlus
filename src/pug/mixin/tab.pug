@@ -18,7 +18,7 @@ mixin tab(arr)
   
   ul.nav.nav-tabs.mb-5.d-flex.justify-content-between.border-0
     each item, idx in arr
-      li.border-secondary(class=(idx == 0 && 'active') style="border-bottom: 2px solid;")
+      li.border-secondary.my-2(class=(idx == 0 && 'active') style="border-bottom: 2px solid;")
         a.px-2(data-toggle="tab" href=('#' + item.name) )=item.label
   
   // general mixin slot

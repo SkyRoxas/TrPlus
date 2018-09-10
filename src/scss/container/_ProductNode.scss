@@ -1,18 +1,26 @@
-.product-node{
-  .info{
-    .price-wrap{
+.product-node {
+  .info {
+    .label {
       color: $cyan3;
-      .offer-price{
+    }
+
+    // 價錢
+    .price-wrap {
+      .offer-price {
         color: $orange;
       }
-      .web-price,.original-price{
+
+      .web-price,
+      .original-price {
         text-decoration: line-through;
         color: $gray;
       }
-      .promotions-wrap{
+
+      .promotions-wrap {
         position: relative;
         padding-left: 11px;
-        &:before{
+
+        &:before {
           left: 0;
           position: absolute;
           content: '';
@@ -21,6 +29,79 @@
           width: 2px;
           background-color: $pink;
         }
+      }
+    }
+
+    // 紅利金
+    .point-wrap {
+      a {
+        text-decoration: underline;
+      }
+
+      .bonus-wrap {
+        .label {
+          color: $orange;
+        }
+      }
+
+      .how-to-use-wrap {
+        .question {
+          color: $orange;
+        }
+      }
+
+      .coupon-wrap {
+        span {
+          color: $orange;
+        }
+      }
+    }
+
+    // 加入購物車
+    .shop-wrap {
+      .color-wrap {
+        flex-basis: 370px;
+        max-width: 370px;
+
+        .color-set-wrap {
+          margin: -5px;
+
+          .color {
+            margin: 5px;
+            width: 30px;
+            height: 30px;
+          }
+
+          //選擇顏色外誆
+          input[type="radio"]:checked+label {
+            border: 2px solid $orange;
+          }
+        }
+      }
+
+      .spec-wrap {
+        flex-basis: 170px;
+        max-width: 170px;
+      }
+
+      .qty-wrap {
+        flex-basis: 70px;
+        max-width: 70px;
+      }
+
+      .add-cart-wrap {
+        flex-basis: 470px;
+        max-width: 470px;
+
+        .add-to-cart {
+          background-color: $orange;
+          height: 60px;
+        }
+      }
+
+      // 下拉選單
+      select {
+        height: 30px;
       }
     }
   }

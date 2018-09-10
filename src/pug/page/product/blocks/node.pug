@@ -27,7 +27,7 @@ mixin productTab()
     +slot('doc')
       .container.p-0
         .row
-          .col-6
+          .col-12.col-xl-6
             .body
               p 
                 | 尺寸：長 300 x 寬 200 x 高 200
@@ -38,22 +38,25 @@ mixin productTab()
                 li 日本精緻公益免組裝，即買即用 四層抽屜收納櫃，大容量抽屜
                 li 超靜音貼紙劃歸，使用順暢
                 li 封閉式櫃體
-          .col-6
-            p 特規商品延伸費用
+          .col-12.col-xl-6
+            p.label 特規商品延伸費用
             .container.p-0
-              .row
+              .row.mb-3
                 .col
                   .p-2.text-center.bg-white
                     .mb-2 超材計費
                     .price.small +$100
                 .col
                   .p-2.text-center.bg-white
-                    .mb-2 超材計費
+                    .mb-2 超重計費
                     .price.small +$100
                 .col
                   .p-2.text-center.bg-white
-                    .mb-2 超材計費
+                    .mb-2 安裝費
                     .price.small +$100
+            .link.d-flex.align-items-center.justify-content-center
+              i.h4.question.fas.fa-question-circle.mr-3
+              a.h4(href='/') 偏遠地區／登高費用查詢
     +slot('rate')
       p rate
     +slot('payMethod')
@@ -62,7 +65,7 @@ mixin productTab()
       p rate    
 
 
-.container.product-node
+.container.product-node.mb-5
   .row.justify-content-center.justify-content-lg-start
     .col-12.col-lg-6
       .slider-for
@@ -102,7 +105,7 @@ mixin productTab()
             +rating(5,3)
         .wrap.mb-5
           .exclusive 線上獨賣
-        .price-wrap.d-flex.align-items-baseline.flex-wrap.mb-5
+        .price-wrap.d-flex.align-items-baseline.flex-wrap.mb-4
           .offer-wrap.mr-5
             .label.pt-1.h4 優惠價
             .offer-price.h2 $12,399
@@ -115,6 +118,42 @@ mixin productTab()
           .promotions-wrap
             .label.pt-1.mb-3.h4 優惠活動
             .body.pt-1.h4 床寢傢俱 滿 3,000 現折 300
+        .point-wrap.d-flex.align-items-stretch.flex-wrap.mb-4
+          .bonus-wrap.d-flex.align-items-center.mr-4.my-2
+            .label 紅利金
+          .reward-wrap.align-items-center.mr-4.my-2
+            .label.pt-1.h4 最高回饋
+            .reward-price.font-weight-bold 28,485
+          .discount-wrap.align-items-center.mr-4.my-2
+            .label.pt-1.h4 最高折抵
+            .discount-wrap.font-weight-bold 190
+          .how-to-use-wrap.d-flex.align-items-center.mr-4.my-2
+            i.question.fas.fa-question-circle.mr-3
+            a(href='/') 紅利金怎麼用
+          .coupon-wrap.d-flex.align-items-center.my-2
+            span.mr-3.h3.mb-0 •
+            a(href='/') 查看可用折價卷
+        .shop-wrap.d-flex.flex-wrap.justify-content-xl-between
+          .color-wrap.my-4
+            .label.mb-2.h4 選擇顏色
+            .color-set-wrap.d-flex.flex-wrap
+              each color, index in ['#000000','#000000','#000000','#000000','#000000','#000000','#000000','#000000','#000000',]
+                input.radio.d-none(type='radio' id=`color-set-${index}` name="colors")
+                label.color(for=`color-set-${index}` style=`background-color: ${color};`)
+          .spec-wrap.my-4.mr-2.mr-xl-0
+            .label.mb-2.h4 選擇規格
+            .spec-set
+              select.form-control
+                each spec, index in ['請選擇','規格一','規格二','規格三']
+                  option= spec
+          .qty-wrap.my-4
+            .label.mb-2.h4 選擇數量
+            .qty-slot
+              select.form-control
+                each qty, index in [1,2,3,4,5,6,7,8,9,10]
+                  option= qty
+          .add-cart-wrap.my-4
+            a.add-to-cart.d-flex.justify-content-center.align-items-center.text-white.h3(href='#' role="button") 加入購物車
       .productTab.mb-3
         +productTab()
       .bn

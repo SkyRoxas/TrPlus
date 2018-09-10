@@ -1,0 +1,26 @@
+.productTab {
+  .nav {
+    a {
+      color: $gray-600;
+      &:hover{
+        color: $cyan3;
+
+      }
+    }
+
+    .active {
+      a {
+        color: $cyan3;
+      }
+    }
+  }
+  .link{
+    color: $orange;
+    a{
+      text-decoration: underline;
+    }
+  }
+  .label,.price{
+    color: $cyan3;
+  }
+}
