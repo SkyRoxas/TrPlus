@@ -92,10 +92,29 @@
       .add-cart-wrap {
         flex-basis: 470px;
         max-width: 470px;
-
+        position: relative;
         .add-to-cart {
           background-color: $orange;
           height: 60px;
+        }
+        .fa-shopping-cart{
+          top: 22px;
+          left: 20px;
+          position: absolute;
+        }
+      }
+      .preorder-cart-wrap {
+        flex-basis: 470px;
+        max-width: 470px;
+        position: relative;
+        .preorder-to-cart {
+          background-color: $cyan;
+          height: 60px;
+        }
+        .fa-shopping-cart{
+          top: 22px;
+          left: 20px;
+          position: absolute;
         }
       }
 

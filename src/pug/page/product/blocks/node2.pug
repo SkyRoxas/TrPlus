@@ -27,7 +27,7 @@ mixin productTab()
     +slot('doc')
       .container.p-0
         .row
-          .col-12.col-xl-6
+          .col-12
             .body
               p 
                 | 尺寸：長 300 x 寬 200 x 高 200
@@ -38,25 +38,6 @@ mixin productTab()
                 li 日本精緻公益免組裝，即買即用 四層抽屜收納櫃，大容量抽屜
                 li 超靜音貼紙劃歸，使用順暢
                 li 封閉式櫃體
-          .col-12.col-xl-6
-            p.label 特規商品延伸費用
-            .container.p-0
-              .row.mb-3
-                .col
-                  .p-2.text-center.bg-white
-                    .mb-2 超材計費
-                    .price.small +$100
-                .col
-                  .p-2.text-center.bg-white
-                    .mb-2 超重計費
-                    .price.small +$100
-                .col
-                  .p-2.text-center.bg-white
-                    .mb-2 安裝費
-                    .price.small +$100
-            .link.d-flex.align-items-center.justify-content-center
-              i.h4.question.fas.fa-question-circle.mr-3
-              a.h4(href='/') 偏遠地區／登高費用查詢
     +slot('rate')
       p rate
     +slot('payMethod')
@@ -97,14 +78,12 @@ mixin productTab()
     .col-12.col-lg-6
       .info
         .product-name.h3 一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一
-        .wrap.d-flex.justify-content-between.mb-2
+        .wrap.d-flex.justify-content-between.mb-5
           .sku.d-flex.text-muted
             .sku-label 商品編號:
             .value 014175830
           .rate-wrap
             +rating(5,3)
-        .wrap.mb-5
-          .exclusive 線上獨賣
         .price-wrap.d-flex.align-items-baseline.flex-wrap.mb-4
           .offer-wrap.mr-5
             .label.pt-1.h4 優惠價
@@ -140,12 +119,6 @@ mixin productTab()
               each color, index in ['#000000','#000000','#000000','#000000','#000000','#000000','#000000','#000000','#000000',]
                 input.radio.d-none(type='radio' id=`color-set-${index}` name="colors")
                 label.color(for=`color-set-${index}` style=`background-color: ${color};`)
-          .spec-wrap.my-4.mr-2.mr-xl-0
-            .label.mb-2.h4 選擇規格
-            .spec-set
-              select.form-control
-                each spec, index in ['請選擇','規格一','規格二','規格三']
-                  option= spec
           .qty-wrap.my-4
             .label.mb-2.h4 選擇數量
             .qty-slot
