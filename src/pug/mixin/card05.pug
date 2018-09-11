@@ -9,7 +9,7 @@ mixin card05()
     
   block
   
-  .card05.bg-white(style="height:100%;")
+  .card05.d-flex.flex-column(style="width: 100%;")
     if slots['header']
       .title.text-white.p-4(style="background: #C3C7C8")
         .d-flex.justify-content-between.align-items-center
@@ -17,8 +17,11 @@ mixin card05()
             i.fas.fa-circle.mr-3
             - slots['header'](); 
           i.fas.fa-minus
+          i.fas.fa-plus
+            
     if slots['body']
-      .body.p-md-5.p-3
-        - slots['body']();
+      .body.bg-white(style="height:100%;")
+        .p-md-5.p-3
+          - slots['body']();
          
          

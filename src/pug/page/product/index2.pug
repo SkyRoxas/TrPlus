@@ -13,17 +13,17 @@ block content
     
     .container
       .row
-        .col-md-6.col-12
+        .col-md-6.col-12.mb-5
           .mb-5
             include blocks/special
-          .mb-5
+          div
             include blocks/brand
-        .col-md-6.col-12.d-block.d-md-flex.flex-column
+        .col-md-6.col-12.d-block.d-md-flex.flex-column.mb-5
           .mb-5
             include blocks/detail
           .mb-5
             include blocks/remind
-          .mb-5.col.p-0
+          .p-0.d-flex(style="flex:1;")
             include blocks/notice
           
     .container.mb-5
@@ -33,6 +33,5 @@ block content
       include blocks/history.pug
     .mb-5  
       include blocks/otherbuy.pug
-    
     
   

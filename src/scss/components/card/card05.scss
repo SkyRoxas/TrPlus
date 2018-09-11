@@ -1,0 +1,20 @@
+.card05{
+
+  .title{
+    cursor: pointer;
+    .fa-plus{
+      display: none;
+    }
+    .fa-minus{
+      display: block;
+    }
+  }
+  .show.title{
+    .fa-minus{
+      display: none;
+    }
+    .fa-plus{
+      display: block;
+    }
+  }
+}
