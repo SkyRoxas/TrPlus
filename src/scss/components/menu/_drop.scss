@@ -1,13 +1,13 @@
-.drop-menu{
-   > li.nav-item.show{
-     >a.nav-link{
-       background: $primary;
-     }
-   }
+.drop-menu {
+  >li.nav-item.show {
+    >a.nav-link {
+      background: $primary;
+    }
+  }
 }
 
-.dropdown-toggle{
-  &:after{
+.dropdown-toggle {
+  &:after {
     display: none;
   }
 }
