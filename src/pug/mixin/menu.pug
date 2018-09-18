@@ -47,37 +47,37 @@ mixin menu(opt)
             .ml-1.text-white 篩選
         #navbarSupportedContent.collapse.navbar-collapse
           .navbar-nav.mr-auto.drop-menu.d-flex.justify-content-between(style="width: 100%;")
-            ul.drop-menu.d-flex.flex-lg-row.flex-column.p-0.m-0
+            .drop-menu.d-flex.flex-lg-row.flex-column.p-0.m-0(data-dropdown-in="fadeIn" data-dropdown-out="fadeOut")
               each item, idx in opt.items
                 if(item.align == "left")
-                  li.nav-item.dropdown.d-block
+                  .nav-item.dropdown.d-block
                     a#navbarDropdown.nav-link.dropdown-toggle.text-white.p-4(href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
                       | !{item.name}
                       i.fas.fa-angle-down.ml-2
                     .dropdown-menu.m-0.p-0.border-0.rounded-0.bg-primary(aria-labelledby="navbarDropdown" style="min-width: 165px")
                       each subItem, subIdx in opt.items[idx].subs
                         if subItem.active
-                          a.dropdown-item.text-white.p-2.active.d-flex.justify-content-between.align-items-center(href="#") !{subItem.name}
+                          a.dropdown-item.text-white.p-2.px-4.active.d-flex.justify-content-between.align-items-center(href="#") !{subItem.name}
                             i.fas.fa-check-circle
                           .dropdown-divider.m-0
                         else
-                          a.dropdown-item.text-white.p-2(href="#") !{subItem.name}
+                          a.dropdown-item.text-white.p-2.px-4(href="#") !{subItem.name}
                           .dropdown-divider.m-0
-            ul.drop-menu.d-flex.flex-lg-row.flex-column.p-0.m-0
+            .drop-menu.d-flex.flex-lg-row.flex-column.p-0.m-0
                 each item, idx in opt.items
                   if(item.align == "right")
-                    li.nav-item.dropdown.d-block
+                    .nav-item.dropdown.d-block
                       a#navbarDropdown.nav-link.dropdown-toggle.text-white.p-4(href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
                         | !{item.name}
                         i.fas.fa-angle-down.ml-2
                       .dropdown-menu.dropdown-menu-right.m-0.p-0.border-0.rounded-0.bg-primary(aria-labelledby="navbarDropdown" style="min-width: 165px")
                         each subItem, subIdx in opt.items[idx].subs
                           if subItem.active
-                            a.dropdown-item.text-white.p-2.active.d-flex.justify-content-between.align-items-center(href="#") !{subItem.name}
+                            a.dropdown-item.text-white.p-2.px-4.active.d-flex.justify-content-between.align-items-center(href="#") !{subItem.name}
                               i.fas.fa-check-circle
                             .dropdown-divider.m-0
                           else
-                            a.dropdown-item.text-white.p-2(href="#") !{subItem.name}
+                            a.dropdown-item.text-white.p-2.px-4(href="#") !{subItem.name}
                             .dropdown-divider.m-0
 
     

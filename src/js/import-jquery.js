@@ -21,8 +21,4 @@ $(document).ready(function() {
       $(that).find('.body').slideToggle()
     })
   })
-
-
-
-
 })

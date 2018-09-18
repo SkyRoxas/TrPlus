@@ -1,7 +1,17 @@
 .drop-menu {
+
+  *{
+    transition: 0s;
+  }
+  
   >li.nav-item.show {
     >a.nav-link {
       background: $primary;
+    }
+  }
+  >li.nav-item {
+    >a.nav-link {
+      transition: 0s;
     }
   }
 }
