@@ -47,7 +47,7 @@ mixin menu(opt)
             .ml-1.text-white 篩選
         #navbarSupportedContent.collapse.navbar-collapse
           .navbar-nav.mr-auto.drop-menu.d-flex.justify-content-between(style="width: 100%;")
-            ul.drop-menu.d-flex.flex-md-row.flex-column.p-0.m-0
+            ul.drop-menu.d-flex.flex-lg-row.flex-column.p-0.m-0
               each item, idx in opt.items
                 if(item.align == "left")
                   li.nav-item.dropdown.d-block
@@ -63,7 +63,7 @@ mixin menu(opt)
                         else
                           a.dropdown-item.text-white.p-2(href="#") !{subItem.name}
                           .dropdown-divider.m-0
-            ul.drop-menu.d-flex.flex-md-row.flex-column.p-0.m-0
+            ul.drop-menu.d-flex.flex-lg-row.flex-column.p-0.m-0
                 each item, idx in opt.items
                   if(item.align == "right")
                     li.nav-item.dropdown.d-block
